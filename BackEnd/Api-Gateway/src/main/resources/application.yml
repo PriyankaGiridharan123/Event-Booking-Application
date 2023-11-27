@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: authenticate-server
+          uri: lb://authenticate-server
+          predicates:
+            - Path=/auth/**
+                        
+        - id: event-server
+          uri: lb://event-server
+          predicates:
+            - Path=/event/**
+        
+        - id: userside-server
+          uri: lb://userside-server
+          predicates:
+            - Path=/userside/**
+            
+            
+         

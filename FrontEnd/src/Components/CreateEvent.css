@@ -1,0 +1,85 @@
+.create-event-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #cfe2f3;
+}
+
+.create-event-container .signup-form1 {
+  background: #6a9ec1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 100%; 
+  max-width: 500px; 
+}
+
+.create-event-container .container {
+  text-align: center;
+}
+
+.create-event-container .header h1 {
+  font-size: 32px;
+  margin: 0;
+  color: #fcfeff;
+}
+
+.create-event-container .header p {
+  font-size: 18px;
+  color: #fafafb;
+}
+
+.create-event-container .input {
+  margin: 20px 0;
+}
+
+.create-event-container input[type="text"],
+.create-event-container input[type="date"] {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #337ab7;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.create-event-container input[type="text"]:focus,
+.create-event-container input[type="date"]:focus {
+  border-color: #195c9b;
+}
+
+.create-event-container .e-signup-btn,
+.create-event-container .e-cancel-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.create-event-container .e-signup-btn {
+  background: #2f4f7d;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.create-event-container .e-signup-btn:hover {
+  background: #061b9f;
+}
+
+.create-event-container .e-cancel-btn {
+  background: #4275a4;
+  color: #fff;
+}
+
+.create-event-container .e-cancel-btn:hover {
+  background: #13243f;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .create-event-container .signup-form1 {
+    padding: 20px;
+  }
+}

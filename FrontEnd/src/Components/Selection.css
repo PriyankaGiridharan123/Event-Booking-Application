@@ -1,0 +1,385 @@
+/* Your CSS for the entire application, if any */
+
+.selection-page {
+    /* General styles */
+    font-size: 62.5%;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the content takes up at least the viewport height */
+    max-width: 800vh;
+}
+  
+  .selection-page *:before,
+  .selection-page *:after {
+    box-sizing: inherit;
+  }
+  
+  .selection-page ul {
+    list-style: none;
+  }
+  
+  .selection-page img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Vars */
+  .selection-page {
+    --body-color: #333;
+    --main-color: #4179b8;
+    --secondary-color: #35495e;
+    --tertiary-color: #d52c23;
+    background-color: rgba(226, 75, 203, 0.441);
+  }
+  
+  /* Mixins */
+
+  
+  /* Action button mixin */
+  .selection-page .action-btn {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+  }
+  
+  .selection-page .action-btn:hover,
+  .selection-page .action-btn:focus {
+    background-color: var(--tertiary-color);
+    border: 3px solid inset darken(var(--tertiary-color), 15%);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 3px 2px rgba(0, 0, 0, .5);
+  }
+  
+  /* Disabled button mixin */
+  .selection-page .disabled-btn {
+    color: lighten(var(--secondary-color), 45%);
+    border-color: lighten(var(--secondary-color), 45%);
+    background-color: transparent;
+  }
+  
+  .selection-page .disabled-btn:disabled:hover,
+  .selection-page .disabled-btn:disabled:focus {
+    background-color: transparent;
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+  
+  /* Reusable styles */
+  .selection-page .container {
+    width: 100%;
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  
+  .selection-page .alignment-container {
+    --xalign: space-between;
+    --yalign: center;
+    display: flex;
+    justify-content: var(--xalign);
+    align-items: var(--yalign);
+  }
+  
+  .selection-page .display-title {
+    font-size: 2.8rem;
+  }
+  
+  .selection-page .page-title {
+    margin-bottom: 0;
+    font-size: 2.8rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  /* Layout */
+  .selection-page .header .alignment-container {
+    border-bottom: 2px dashed var(--secondary-color);
+  }
+  
+  .selection-page .footer {
+    margin-top: 2em;
+    border-top: 2px dashed var(--secondary-color);
+  }
+  
+  .selection-page .products-container {
+    display: flex; /* Use flexbox to make the children display in a row */
+    flex-wrap: nowrap; /* Prevent the items from wrapping to the next row */
+    justify-content: space-between; /* Adjust as needed */
+    align-items: center; /* Align items vertically, adjust as needed */
+}
+  
+  /* Components */
+  .selection-page .logo {
+    margin-right: 1em;
+    font-size: 1.2rem;
+    line-height: 1;
+    color: var(--main-color);
+  }
+  
+  .selection-page .logo__title,
+  .selection-page .logo__title-link {
+    font-family: 'Bevan', cursive;
+  }
+  
+  .selection-page .logo__title-link {
+    text-decoration: none;
+    color: var(--main-color);
+  }
+  
+  /* Shopping cart in products page */
+  .selection-page .cart-header-info__text,
+  .selection-page .cart-header-info__link {
+    display: inline-block;
+  }
+  
+  .selection-page .cart-header-info__text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-right: 10px;
+  }
+  
+  .selection-page .cart-header-info__link {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+  }
+  
+  .selection-page .cart-header-info__link:hover,
+  .selection-page .cart-header-info__link:focus {
+    background-color: var(--secondary-color); /* Change the background color on hover */
+    color: #fff; /* Change the text color on hover */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+  }
+  
+  /* Shopping cart in cart page */
+  .selection-page .cart {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .selection-page .cart tbody tr:nth-child(odd) {
+    background-color: lighten(var(--main-color), 30%);
+  }
+  
+  .selection-page .cart tbody td {
+    text-align: center;
+    padding: 1em;
+  }
+  
+  .selection-page .cart .cart__total {
+    background-color: var(--secondary-color);
+    color: #fff;
+  }
+  
+  .selection-page .cart .cart__add-qty,
+  .selection-page .cart .cart__remove-qty {
+    width: 30px;
+    height: 30px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.5em;
+    text-align: center;
+    border-radius: 3px;
+    background-color: var(--tertiary-color);
+    border: darken(var(--tertiary-color), 15%);
+    color: #fff;
+  }
+  
+  .selection-page .cart .cart__add-qty:disabled,
+  .selection-page .cart .cart__remove-qty:disabled {
+    color: lighten(var(--secondary-color), 45%);
+    border-color: lighten(var(--secondary-color), 45%);
+    background-color: transparent;
+  }
+  
+  .selection-page .cart .cart__qty-text {
+    margin-right: 3px;
+    font-weight: 700;
+  }
+  
+  .selection-page .cart .cart__checkout-btn {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+  }
+  
+  .selection-page .cart .cart__checkout-btn{
+    background-color: var(--tertiary-color);
+    border: 3px solid inset darken(var(--tertiary-color), 15%);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 3px 2px rgba(0, 0, 0, .5);
+    margin-left: 300px;
+  }
+  .selection-page .cart .cart__checkout-btn:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Hero block */
+  .selection-page .hero {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(223, 230, 222, 0.5),
+      rgba(40, 180, 133, .5)
+    ),
+    url(https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_640.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #181717;
+    border-bottom: 3px dashed var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+  }
+  
+  .selection-page .hero__btn {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+  }
+  
+  .selection-page .hero__btn:hover,
+  .selection-page .hero__btn:focus {
+    background-color: var(--tertiary-color);
+    border: 3px solid inset darken(var(--tertiary-color), 15%);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 3px 2px rgba(0, 0, 0, .5);
+  }
+  
+  /* Cards with products */
+  .selection-page .prod-card__image {
+    border: 2px solid var(--tertiary-color);
+    border-radius: 3px;
+    padding: 1em;
+    filter: sepia(40%) contrast(200%) opacity(85%);
+    transition: filter 0.3s;
+  }
+  .selection-page .prod-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .selection-page .prod-card__image {
+    max-width: 100%; /* Ensure the image fits within its container */
+  }
+  
+  .selection-page .prod-card__info {
+    padding: 1em;
+    line-height: 1;
+  }
+  
+  .selection-page .prod-card__title {
+    font-size: 2rem;
+    color: var(--secondary-color);
+  }
+  
+  .selection-page .prod-card__description {
+    line-height: 1.5;
+    font-size: 15px;
+    color: #000;
+  }
+  
+  .selection-page .prod-card__price,
+  .selection-page .prod-card__in-stock {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 6px 10px;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .selection-page .not-in-stock {
+    background-color: var(--tertiary-color);
+  }
+  
+  .selection-page .prod-card__btn {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+  }
+  
+  .selection-page .prod-card__btn:hover {
+    background-color: var(--secondary-color); /* Change the background color on hover */
+    color: #fff; /* Change the text color on hover */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+  }
+  
+  .selection-page .prod-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid var(--tertiary-color);
+    border-radius: 3px;
+    padding: 1em;
+    transition: transform 0.2s;
+    border: 2px solid var(--tertiary-color);
+    display: inline-block; /* Display cards inline to place them horizontally */
+    width: calc(33.33% - 20px); /* Adjust the width as needed */
+    margin-right: 20px; /* Add spacing between the cards (adjust as needed) */
+  }
+  .selection-page .prod-card__btn:disabled {
+    color: lighten(var(--secondary-color), 45%);
+    border-color: lighten(var(--secondary-color), 45%);
+    background-color: transparent;
+  }
+  
+  .selection-page .empty-cart {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    font-size: 2.6rem;
+  }
+  .selection-page .prod-card:last-child {
+    margin-right: 0;
+  }
+  th{
+    color:black;
+    font-size: 22px;
+  }
+  td{
+    color:black;
+    font-size: 22px;
+  }
+  
+  
+  

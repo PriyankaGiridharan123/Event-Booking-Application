@@ -1,0 +1,88 @@
+.support-page * {
+  font-family: Roboto, sans-serif;
+}
+
+.support-page body {
+  background-color: #e8edef;
+}
+
+.support-page .support {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.support-page .support-inh {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  list-style-type: none;
+  background-color: #fff;
+}
+
+.support-page .support-inh img {
+  width: 100%;
+  transition: 0.5s;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.support-page .support-inh p {
+  padding: 0;
+  margin-left: 1.27em;
+  margin-right: 1.27em;
+}
+
+.support-page .support-inh h3 {
+  text-align: left;
+  margin-top: 16px;
+  margin-bottom: 15px;
+  margin-left: 1em;
+}
+
+.support-page h1 {
+  font-size: 46px;
+  font-weight: 800;
+  margin: 15px 0;
+  line-height: 50px;
+  color: #0F2036;
+}
+
+.support-page p {
+  color: #777;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.support-page .row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.support-page .support-inh {
+  transition: all 0.2s ease-in-out;
+}
+
+.support-page .support-inh:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 700px) {
+  .support-page .verticalLine {
+    width: 1px;
+  }
+
+  .support-page h1 {
+    font-size: 24px;
+    line-height: unset;
+  }
+
+  .support-page .row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,82 @@
+.upcoming {
+    background-color: #cfe2f3;
+    padding: 5vw;
+    border: 1px solid #6a9ec1;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.upcoming h1 {
+    font-size: 2em;
+    margin-bottom: 2vw;
+    color: #195c9b;
+}
+
+.upcoming table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2vw;
+}
+
+.upcoming th,
+.upcoming td {
+    border: 1px solid #337ab7;
+    padding: 1em;
+    text-align: left;
+}
+
+.upcoming thead {
+    background-color: #195c9b;
+    color: #fff;
+}
+
+.upcoming tr:hover {
+    background-color: #e0e0e0;
+}
+
+@media screen and (max-width: 768px) {
+    .upcoming {
+        padding: 2vw;
+    }
+
+    .upcoming h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .upcoming th,
+    .upcoming td {
+        padding: 0.5em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .upcoming {
+        padding: 1vw;
+    }
+
+    .upcoming h1 {
+        font-size: 1.2em;
+        margin-bottom: 8px;
+    }
+
+    .upcoming th,
+    .upcoming td {
+        padding: 0.3em;
+    }
+}
+
+.book-button {
+    background-color: #2f4f7d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.book-button:hover {
+    background-color: #195c9b;
+}
